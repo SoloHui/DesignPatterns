@@ -1,0 +1,41 @@
+@startuml FactoryPattern
+
+' `abstract class` 抽象类
+' `class` 类
+
+' `+` 公有方法
+' `#` 保护方法
+' `-` 私有方法
+
+abstract class api {
+    +abstractMethod()
+}
+
+class impleone {
+    +abstractMethod()
+}
+
+class impletwo {
+    +abstractMethod()
+}
+
+' `:` 表示该方法的返回值类型
+class factory {
+    +createApi() : api
+}
+
+class client {
+    +doSomething()
+}
+
+' `--|>` 表示继承关系
+impleone --|> api
+impletwo --|> api
+
+' `..>` 表示依赖关系
+' `:` 表示依赖关系的说明
+factory ..> api : depends
+client ..> factory : depends
+client ..> api : uses
+
+@enduml
