@@ -4,8 +4,8 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-  $$PWD/simplefactory.cpp \
+  # $$PWD/simplefactory.cpp \
+  $$PWD/dynamicfactory.cpp
 
 HEADERS += \
   $$PWD/dynamicobject.h \
-  $$PWD/simplefactory.h
