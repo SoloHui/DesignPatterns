@@ -1,5 +1,5 @@
 TEMPLATE = subdirs
 
 SUBDIRS += \
-  $$PWD/chapter02 \
+  $$PWD/designpatterns \
 
